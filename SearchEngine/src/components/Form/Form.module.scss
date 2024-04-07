@@ -1,0 +1,19 @@
+.form {
+  display: flex;
+  justify-content: center;
+  width: 800px;
+  max-width: 80vw;
+  height: 40px;
+
+  &__input {
+    flex: 1;
+    min-width: 30%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    // background-color: palette.$bg-color;
+    // transition: background-color 0.3s ease;
+
+    
+  }
+}

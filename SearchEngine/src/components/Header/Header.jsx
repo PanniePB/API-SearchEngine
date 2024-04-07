@@ -1,11 +1,18 @@
-
+import styles from "./Header.module.scss"
 
 const Header = () => {
   return (
-    <>
-    <h1>Google Books</h1>
-    <p>Serach through the Google books database and find your favourite read.</p>
-    </>
+    
+    <div className={styles.header}>
+        <img src = "src\assets\Googlebooks.jpg"/>
+         <h1 className={styles.header__title}>
+        Search through the Google books database and find your favourite read!
+      </h1>
+    
+  
+    
+    </div>
+    
   )
 }
 
