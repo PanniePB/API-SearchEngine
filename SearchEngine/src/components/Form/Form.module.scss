@@ -1,19 +1,42 @@
+@use "../partials/mixins.scss";
+@use "../partials/palette.scss";
+
+
 .form {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 800px;
   max-width: 80vw;
   height: 40px;
+  gap :10px;
+  
 
   &__input {
     flex: 1;
-    min-width: 30%;
+    min-width: 60%;
     padding: 10px;
     border: 1px solid black;
     border-radius: 5px;
-    // background-color: palette.$bg-color;
-    // transition: background-color 0.3s ease;
-
-    
+    background-color: palette.$bg-color;
+    transition: background-color 0.3s ease; 
+   
   }
+
+  & button{
+    padding : 0 30px;
+      border: 1px solid black;
+     background-color: white;
+      cursor: pointer;
+      border-radius: 5px;
+
+      &:hover{
+        background-color: palette.$bg-color-dark;
+      }
+  
+
+  & img{
+    height : 30px;
+  }
+}
 }

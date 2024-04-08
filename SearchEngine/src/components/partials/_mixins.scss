@@ -1,0 +1,73 @@
+@use "breakpoints.scss";
+
+@mixin phone_sm {
+  @media only screen and (max-width: breakpoints.$xs) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media only screen and (max-width: breakpoints.$sm) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: breakpoints.$md) {
+    @content;
+  }
+}
+
+@mixin desktop_sm {
+  @media only screen and (max-width: breakpoints.$lg) {
+    @content;
+  }
+}
+
+@mixin desktop_md {
+  @media only screen and (max-width: breakpoints.$xl) {
+    @content;
+  }
+}
+
+@mixin desktop_lg {
+  @media only screen and (min-width: (breakpoints.$xl + 1px)) {
+    //  placeholder for actual values
+    @content;
+  }
+}
+
+// @mixin phone_sm {
+//   @media only screen and (max-width: breakpoints.$xs) {
+//     @content;
+//   }
+// }
+
+// @mixin phone {
+//   @media only screen and (min-width: (breakpoints.$xs + 1px)) and (max-width: breakpoints.$sm) {
+//     @content;
+//   }
+// }
+// @mixin tablet {
+//   @media only screen and (min-width: (breakpoints.$sm + 1px)) and (max-width: breakpoints.$md) {
+//     @content;
+//   }
+// }
+
+// @mixin desktop_sm {
+//   @media only screen and (min-width: (breakpoints.$md + 1px)) and (max-width: breakpoints.$lg) {
+//     @content;
+//   }
+// }
+// @mixin desktop_md {
+//   @media only screen and (min-width: (breakpoints.$lg + 1px)) and (max-width: breakpoints.$xl) {
+//     @content;
+//   }
+// }
+
+// @mixin desktop_lg {
+//   @media only screen and (min-width: breakpoints.$xl) {
+//     //  placeholder for actual values
+//     @content;
+//   }
+// }

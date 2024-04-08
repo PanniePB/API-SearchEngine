@@ -1,24 +1,31 @@
 import { useState } from "react";
 import styles from "./Form.module.scss";
 
-export const Form = ({onSumbit}) => {
-const [searchTerm,setSearchTerm]=useState(null)
-const handleSubmit=(e)=>{
+export const Form = ({onSubmit}) => {
+
+const [searchTerm,setSearchTerm] = useState(null)
+
+const handleSubmit = (e) => {
   e.preventDefault();
-  onSumbit(searchTerm);
+  onSubmit(searchTerm);
 
 }
   const onInputChange = (e) => {
     setSearchTerm(e.target.value);
   };
+
   return (
 
     <form  className={styles.form} action="">
-      <input  className={styles.form__input}
+      <input  
+        className={styles.form__input}
         onChange={onInputChange}
-         type="text" 
-         placeholder="Search by title"/>
-      <button onClick={handleSubmit}></button>
+        type="text" 
+        placeholder="Search by title"/>
+
+      <button onClick={handleSubmit}> 
+      <img src="src\assets\searchLogo.jpg"></img>
+      </button>
     </form>
   )
 }
