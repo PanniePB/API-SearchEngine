@@ -1,20 +1,36 @@
+
 import Header from "./components/Header/Header";
-import Form from "./components/Form/Form";
 import { useState } from "react";
+import Form from "./components/Form/Form";
+import BooksList from "./components/BooksList/BooksList"
+import Footer from "./components/Footer/Footer";
+
 
 const App = () => {
-const handleSubmit=()=>{
-  console.log("button clicked")
-}
+  const [searchTerm, setSearchTerm] = useState(null);
+  const [emptySearch, setEmptySearch] = useState(null);
 
+  const handleSubmit = (searchTerm) => {
+    if (!searchTerm) {
+      setEmptySearch(true);
+      return;
+    }
+    setEmptySearch(false);
+    setSearchTerm(searchTerm);
+  };
 
   return (
-  <>
+    <div  >
     <Header/>
-    <Form onSubmit={handleSubmit}/>
-    
-    </>
-  )
-}
+    <main >
 
-export default App
+      <Form onSubmit={handleSubmit}/>
+      <BooksList emptySearch={emptySearch} searchTerm={searchTerm}/>
+
+    </main>
+    <Footer/>
+    </div>
+  );
+};
+
+export default App;

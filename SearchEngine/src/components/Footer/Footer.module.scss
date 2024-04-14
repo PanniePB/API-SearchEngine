@@ -1,0 +1,9 @@
+@use "../partials/mixins.scss";
+@use "../partials/palette.scss";
+
+.footer {
+  font-weight: 400;
+  @include mixins.phone_sm {
+    font-size: small;
+  }
+}

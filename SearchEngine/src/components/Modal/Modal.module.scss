@@ -1,0 +1,128 @@
+
+@use "../partials/mixins.scss";
+@use "../partials/palette.scss";
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 0, 0.7);
+  opacity: 0.7;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  width: 60vw;
+  max-width: 700px;
+  background-color: palette.$bg-color;
+  z-index: 2;
+  position: fixed;
+  top: 15vh;
+  border-radius: 5px;
+  gap: 25px;
+  max-height: 60vh;
+  overflow: auto;
+  background-color: palette.$yellow-light;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeIn 0.3s ease forwards;
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @include mixins.phone {
+    width: 80vw;
+    font-size: 0.8em;
+    gap: 10px;
+  }
+
+  &__top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    min-height: 100px;
+
+    &__details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 0.9em;
+      & p span {
+        font-weight: bold;
+      }
+    }
+    &__title {
+      font-weight: bolder;
+      font-size: 1.3em;
+      @include mixins.tablet {
+        font-size: 1em;
+      }
+    }
+  }
+
+  &__image {
+    width: 20%;
+    min-width: 70px;
+    box-shadow: 2px 3px 11px 0px rgba(0, 0, 0, 0.6);
+  }
+
+  &__desc {
+    font-size: 0.9em;
+    text-align: justify;
+
+    &__label {
+      font-weight: bold;
+    }
+  }
+}
+
+// .card {
+// display: flex;
+// flex-direction: column;
+// gap: 15px;
+// padding: 15px;
+// justify-content: space-between;
+// align-items: center;
+// width: 800px;
+// max-width: 60vw;
+// background-color: palette.$bg-color;
+// z-index: 2;
+// position: fixed;
+// top: 15vh;
+// border-radius: 5px;
+
+//   @include mixins.phone {
+//   }
+
+//   &__title {
+//     margin: 0;
+//   }
+
+//   &__details {
+//     display: flex;
+//     justify-content: baseline;
+//     overflow: auto;
+//     max-height: 60vh;
+//   }
+
+// & p span {
+//   font-weight: bold;
+// }
+
+//   &__image {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//   }
+// }
