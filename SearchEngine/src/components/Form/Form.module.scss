@@ -10,6 +10,7 @@
   max-width: 80vw;
   height: 40px;
   gap :10px;
+  margin-left: 350px;
   
 
   &__input {
@@ -31,7 +32,7 @@
       border-radius: 5px;
 
       &:hover{
-        background-color: palette.$bg-color-dark;
+        background-color: white;
       }
   
 

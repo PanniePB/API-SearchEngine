@@ -4,7 +4,7 @@ import styles from "./BooksList.module.scss";
 import { fetchBook } from "../services/fetchBook";
 import { useEffect, useState } from "react";
 import Modal from "../Modal/Modal";
-// import Loading from "../Loading/Loading";
+
 
 const BooksList = ({ searchTerm, emptySearch }) => {
   const [books, setBooks] = useState([]);

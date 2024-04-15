@@ -1,5 +1,5 @@
 import styles from "./BookCard.module.scss";
-// import noImageAvailable from "../../assets/NoImageAvailable.png";
+import noImageAvailable from "../../assets/noImageAvailable.jpg";
 
 const BookCard = ({ data, index, showModal, setIndex }) => {
   const { title, author, image, releaseDate } = data;
@@ -25,7 +25,7 @@ const BookCard = ({ data, index, showModal, setIndex }) => {
           <span> Release Date:</span> {releaseDate || "Not available"}
         </p>
       </div>
-      {/* <img src={image || noImageAvailable} alt="book's image" /> */}
+      <img src={image || noImageAvailable} alt="book's image" />
     </article>
   );
 };

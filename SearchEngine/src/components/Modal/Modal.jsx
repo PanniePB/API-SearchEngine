@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import styles from "./Modal.module.scss";
-// import noImageAvailable from "../../assets/NoImageAvailable.png";
+import noImageAvailable from "../../assets/noImageAvailable.jpg"
 
 const Modal = ({ toggleShowModal, item, modalIsShown }) => {
   const { title, author, description, image, language, releaseDate } = item;
@@ -35,17 +35,17 @@ const Modal = ({ toggleShowModal, item, modalIsShown }) => {
               <span> Language:</span> {language}
             </p>
           </div>
-          {/* <img
+          <img
             className={styles.card__image}
             src={image || noImageAvailable}
             alt="book's image"
-          /> */}
+          />
         </section>
         <p className={styles.card__desc}>
           <span className={styles.card__desc__label}> Description:</span>{" "}
           {description || "No description is available for this title"}
         </p>
-        {/* <section className={styles.card__desc}>{description}</section> */}
+        <section className={styles.card__desc}>{description}</section>
       </article>
     </>
   );

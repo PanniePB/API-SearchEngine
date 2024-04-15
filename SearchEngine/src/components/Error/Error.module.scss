@@ -5,7 +5,8 @@
 @use "../partials/palette.scss";
 
 .error {
-  background-color: palette.$red-light;
+  // background-color: palette.$red-light;
+  color: palette.$red ;
   padding: 1em;
   border-radius: 5px;
   text-align: center;

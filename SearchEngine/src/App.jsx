@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import { useState } from "react";
 import Form from "./components/Form/Form";
 import BooksList from "./components/BooksList/BooksList"
-import Footer from "./components/Footer/Footer";
+
 
 
 const App = () => {
@@ -23,12 +23,9 @@ const App = () => {
     <div  >
     <Header/>
     <main >
-
       <Form onSubmit={handleSubmit}/>
       <BooksList emptySearch={emptySearch} searchTerm={searchTerm}/>
-
     </main>
-    <Footer/>
     </div>
   );
 };
