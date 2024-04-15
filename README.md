@@ -1,0 +1,1 @@
+A platform that enables the users to search for books by title, author, etc. By clicking on each search result a modal opens up with more information about each title. I used React.JS and SCSS for front-end and utilized google books API as the backend.
